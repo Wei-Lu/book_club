@@ -108,16 +108,15 @@ class BooksController < ApplicationController
     end
 end
 
-def set_is_current_user_admin
-  @is_current_user_admin = (current_user && current_user.is_admin?)
-end
-
-
 private
 
 def find_book
 #  @book = Book.find(params[:id])
   @book = Book.find( params[:book_id] || params[:id])
+end
+
+def set_is_current_user_admin
+  @is_current_user_admin = (current_user && current_user.is_admin?)
 end
 
 end
