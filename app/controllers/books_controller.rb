@@ -112,6 +112,10 @@ end
     @is_current_uer_admin = (current_user && current_user.is_admin?)
   end
 
+  def set_is_current_user_admin
+    @is_current_uer_admin = (current_user && current_user.is_admin?)
+  end
+
 
 private
 
