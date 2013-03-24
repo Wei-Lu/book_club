@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
+  before_filter :set_is_current_user_admin
 
   # GET /books
   # GET /books.json
@@ -29,17 +30,26 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
-    @book = Book.new
+    if !@is_current_uer_admin
+      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
+    else
+      @book = Book.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @book }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @book }
+      end
     end
   end
 
   # GET /books/1/edit
   def edit
-    @book = Book.find(params[:id])
+#    if !@is_current_uer_admin?
+  if(current_user && current_user.is_admin?)
+      @book = Book.find(params[:id])
+    else
+      redirect_to books_url, notice: "Non-Admin cannot edit book entry"      
+    end
   end
 
   # POST /books
@@ -84,6 +94,10 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url }
       format.json { head :no_content }
     end
+  end
+
+  def set_is_current_user_admin
+    @is_current_uer_admin = (current_user && current_user.is_admin?)
   end
 
 

@@ -7,4 +7,6 @@ class Book < ActiveRecord::Base
   has_many :likes
   has_many :users, through: :likes
 
+  BOOK_TYPES = ["Fiction", "Mystry", "Fantisy", "Arts", "Business","History", "Sciences", "Health","Travel"]
+
 end

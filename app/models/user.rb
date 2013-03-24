@@ -24,4 +24,9 @@ class User < ActiveRecord::Base
     likes.where(book_id: book.id).first
   end
 
+=begin
+  def self.is_current_user_admin?
+    current_user && current_user.is_admin?
+  end
+=end  
 end
