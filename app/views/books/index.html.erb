@@ -7,7 +7,7 @@
     <th>Title</th>
     <th>By</th>
     <th>Type</th>
-<% if current_user && current_user.is_admin?  %>    
+<% if @is_current_user_admin  %>    
     <th></th>
     <th></th>
  <% end %>
@@ -29,6 +29,6 @@
 
 <br />
 
-<% if current_user && current_user.is_admin?  %>    
+<% if @is_current_user_admin  %>    
   <%= link_to 'New Book', new_book_path %>
 <% end %>

@@ -30,22 +30,22 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
-    if !@is_current_uer_admin
-      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
-    else
+    if @is_current_user_admin
       @book = Book.new
 
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @book }
       end
+    else
+      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
     end
   end
 
   # GET /books/1/edit
   def edit
-#    if !@is_current_uer_admin?
-  if(current_user && current_user.is_admin?)
+    if @is_current_user_admin
+#  if(current_user && current_user.is_admin?)
       @book = Book.find(params[:id])
     else
       redirect_to books_url, notice: "Non-Admin cannot edit book entry"      
@@ -55,7 +55,7 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    if(current_user && current_user.is_admin?)
+    if @is_current_user_admin
       @book = Book.new(params[:book])
 
       respond_to do |format|
@@ -77,7 +77,7 @@ class BooksController < ApplicationController
   def update
 #    @book = Book.find(params[:id])
 
-    if(current_user && current_user.is_admin?)
+    if @is_current_user_admin
       respond_to do |format|
         if @book.update_attributes(params[:book])
           format.html { redirect_to @book, notice: 'Book was successfully updated.' }
@@ -96,7 +96,7 @@ class BooksController < ApplicationController
   # DELETE /books/1.json
   def destroy
 #    @book = Book.find(params[:id])
-    if(current_user && current_user.is_admin?)
+    if @is_current_user_admin
       @book.destroy
 
       respond_to do |format|
@@ -108,13 +108,9 @@ class BooksController < ApplicationController
     end
 end
 
-  def set_is_current_user_admin
-    @is_current_uer_admin = (current_user && current_user.is_admin?)
-  end
-
-  def set_is_current_user_admin
-    @is_current_uer_admin = (current_user && current_user.is_admin?)
-  end
+def set_is_current_user_admin
+  @is_current_user_admin = (current_user && current_user.is_admin?)
+end
 
 
 private

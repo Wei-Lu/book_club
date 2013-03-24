@@ -21,7 +21,7 @@ def show
    if @review.save
      redirect_to @book,notice: "Review created successfully!"
    else
-    render action :new
+    redirect_to @book, notice: "Review creation failed."
    end 	
   end
 
