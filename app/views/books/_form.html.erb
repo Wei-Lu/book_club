@@ -16,12 +16,12 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :author %><br />
+    <%= f.label "By" %><br />
     <%= f.text_field :author %>
   </div>
   <div class="field">
     <%= f.label :type %><br />
-    <%= f.text_field :book_type %>
+    <%= f.select(:book_type, Book::BOOK_TYPES) %>  
   </div>
   <div class="field">
     <%= f.label :description %><br />

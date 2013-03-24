@@ -1,6 +1,7 @@
 class ReviewsController < BooksController
   before_filter :find_book
   before_filter :find_review, only: [:show, :edit, :update, :destroy]
+=begin
 def index
   @reviews = Review.all
 end
@@ -13,7 +14,7 @@ def show
   def new
   	@review = Review.new
   end
-
+=end
   def create
    @review = Review.new(params[:review])
    @review.book = @book
@@ -24,6 +25,7 @@ def show
    end 	
   end
 
+=begin
   def edit
     @review = Review.find(params[:id])    
   end
@@ -35,10 +37,11 @@ def show
     render :new
    end 
   end
+=end
 
   def destroy
     if @review.destroy
-    	redirect_to Reviews_path, notice: "Review entry is destroyed"
+    	redirect_to @book, notice: "Review entry is destroyed"
     else
     	redirect_to Reviews_path, notice: "Review entry deletion fails"
     end

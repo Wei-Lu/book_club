@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
+  before_filter :set_is_current_user_admin
 
   # GET /books
   # GET /books.json
@@ -29,32 +30,45 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
-    @book = Book.new
+    if !@is_current_uer_admin
+      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
+    else
+      @book = Book.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @book }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @book }
+      end
     end
   end
 
   # GET /books/1/edit
   def edit
-    @book = Book.find(params[:id])
+#    if !@is_current_uer_admin?
+  if(current_user && current_user.is_admin?)
+      @book = Book.find(params[:id])
+    else
+      redirect_to books_url, notice: "Non-Admin cannot edit book entry"      
+    end
   end
 
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new(params[:book])
+    if(current_user && current_user.is_admin?)
+      @book = Book.new(params[:book])
 
-    respond_to do |format|
-      if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
-        format.json { render json: @book, status: :created, location: @book }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @book.save
+          format.html { redirect_to @book, notice: 'Book was successfully created.' }
+          format.json { render json: @book, status: :created, location: @book }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @book.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
     end
   end
 
@@ -63,14 +77,18 @@ class BooksController < ApplicationController
   def update
 #    @book = Book.find(params[:id])
 
-    respond_to do |format|
-      if @book.update_attributes(params[:book])
-        format.html { redirect_to @book, notice: 'Book was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+    if(current_user && current_user.is_admin?)
+      respond_to do |format|
+        if @book.update_attributes(params[:book])
+          format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @book.errors, status: :unprocessable_entity }
+        end
       end
+    else
+        redirect_to books_url, notice: "Non-Admin cannot update book entry"      
     end
   end
 
@@ -78,12 +96,20 @@ class BooksController < ApplicationController
   # DELETE /books/1.json
   def destroy
 #    @book = Book.find(params[:id])
-    @book.destroy
+    if(current_user && current_user.is_admin?)
+      @book.destroy
 
-    respond_to do |format|
-      format.html { redirect_to books_url }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to books_url }
+        format.json { head :no_content }
+      end
+    else
+          redirect_to books_url, notice: "Non-Admin cannot update book entry"      
     end
+end
+
+  def set_is_current_user_admin
+    @is_current_uer_admin = (current_user && current_user.is_admin?)
   end
 
 
