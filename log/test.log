@@ -1,0 +1,1421 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-23 06:49:47 -0700
+Processing by BooksController#index as HTML
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  Rendered books/show.html.erb (37.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (39.6ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:50:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-23 06:50:15 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (7.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (2.9ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  Rendered books/index.html.erb (5.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:26 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:26 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:51:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/reviews/index" for 127.0.0.1 at 2013-03-23 06:51:27 -0700
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-23 06:51:27 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (8.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered books/_form.html.erb (3.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (8.6ms)
+  Rendered books/edit.html.erb (14.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.1ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:57 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 13:59:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-23 06:59:58 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered books/_form.html.erb (2.9ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/reviews/index" for 127.0.0.1 at 2013-03-23 06:59:58 -0700
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.0ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sat, 23 Mar 2013 14:01:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (8.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-23 07:01:54 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (3.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/reviews/index" for 127.0.0.1 at 2013-03-23 07:01:54 -0700
+Processing by ReviewsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (43.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 49ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#new as HTML
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:49:32 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-24 05:49:32 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered books/_form.html.erb (9.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."book_id" = 1002[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."book_id" = 1002
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (3.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (9.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (3.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-24 05:55:15 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."book_id" = 1003[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."book_id" = 1003
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#new as HTML
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"MyString"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"title"=>"invalid value"}, "id"=>"1"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 12:55:15 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 8ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."book_id" = 1001
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."book_id" = 1001[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (9.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (3.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-24 06:09:19 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by BooksController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:09:19 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 9ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  Rendered books/index.html.erb (5.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (8.9ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (3.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-24 06:13:56 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."book_id" = 1005[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."book_id" = 1005
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:13:56 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (41.7ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "book_type", "created_at", "description", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", nil], ["book_type", nil], ["created_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["description", nil], ["title", "MyString"], ["updated_at", Sun, 24 Mar 2013 13:15:16 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2013-03-24 06:15:16 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (47.9ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered books/_form.html.erb (3.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @book.book_type %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @book.description %>
+</p>
+<hr>
+<h2> Reviews </h2>
+<%if @book.reviews.empty? %>
+  "no review"
+<%else%>
+
+  <% @book.reviews.each do |review| %>
+   	<div style="border:solid black 1px">
+  		<p> <%= review.content %> </p>
+      <% if current_user && current_user.is_admin?  %>    
+        <%= link_to "Delete review".html_safe, book_review_path(@book, review), method: :delete, confirm: "Are you sure you want to delete this review" %>
+      <% end %>
+    </div>
+  <% end %>
+
+<% end %>
+
+<br/>
+<hr/>
+  <%= @book.likes.count  %>
+  people have liked this book
+  <% if user_signed_in? %>
+    <% if current_user.has_liked?(@book) %>
+      <%= form_for @like, url: book_like_path(@book, @like), method: :delete do |f| %>
+        <%= f.submit "UnLike" %>  
+      <% end %>
+    <% else %>
+      <%= form_for @like, url: book_likes_path(@book) do |f| %>
+        <%= f.submit "Like" %>  
+      <% end %>
+    <% end %>
+  <% else %>
+    Please <%= link_to "Sign In", new_user_session_path %> in order to like the book
+  <% end %>
+
+
+<%= form_for @review, url: book_reviews_path(@book) do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
