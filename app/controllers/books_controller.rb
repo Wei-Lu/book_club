@@ -38,7 +38,7 @@ class BooksController < ApplicationController
         format.json { render json: @book }
       end
     else
-      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
+      redirect_to books_url, notice: "You must be an admin to create the book entry"      
     end
   end
 
@@ -48,7 +48,7 @@ class BooksController < ApplicationController
 #  if(current_user && current_user.is_admin?)
       @book = Book.find(params[:id])
     else
-      redirect_to books_url, notice: "Non-Admin cannot edit book entry"      
+      redirect_to books_url, notice: "You must be an admin to edit the book entry"      
     end
   end
 
@@ -68,7 +68,7 @@ class BooksController < ApplicationController
         end
       end
     else
-      redirect_to books_url, notice: "Non-Admin cannot create book entry"      
+      redirect_to books_url, notice: "You must be an admin to create the book entry"      
     end
   end
 
@@ -88,7 +88,7 @@ class BooksController < ApplicationController
         end
       end
     else
-        redirect_to books_url, notice: "Non-Admin cannot update book entry"      
+        redirect_to books_url, notice: "You must be an admin to update the book entry"      
     end
   end
 
@@ -97,15 +97,21 @@ class BooksController < ApplicationController
   def destroy
 #    @book = Book.find(params[:id])
     if @is_current_user_admin
-      @book.destroy
-
-      respond_to do |format|
-        format.html { redirect_to books_url }
-        format.json { head :no_content }
+      if @book.destroy
+        respond_to do |format|
+          format.html { redirect_to books_url, notice: "Book entry is deleted successfully"  }
+          format.json { head :no_content }
+        end
+      else
+        format.html { redirect_to books_url, notice: "Book entry is not deleted."  }
       end
     else
-          redirect_to books_url, notice: "Non-Admin cannot update book entry"      
+          redirect_to books_url, notice: "You must be an admin to delete book entry"      
     end
+end
+
+def search
+  @books = Book.search params[:search]  
 end
 
 private

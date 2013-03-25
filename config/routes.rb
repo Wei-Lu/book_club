@@ -7,6 +7,11 @@ BookShow::Application.routes.draw do
     resources :reviews, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
   end
+
+  resources :books, only: [:index] do
+    get "search", to: "books#search"
+  end
+
   root :to => "books#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
