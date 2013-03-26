@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show, :search]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
   before_filter :set_is_current_user_admin
 

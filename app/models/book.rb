@@ -1,6 +1,9 @@
 class Book < ActiveRecord::Base
   attr_accessible :author, :description, :title, :book_type
 
+  validates :title, presence: true
+  validates :author, presence: true
+
   has_many :reviews, dependent: :destroy
   belongs_to :user
 
@@ -28,7 +31,7 @@ class Book < ActiveRecord::Base
 
   def self.search(search)
 	  search_condition = "%" + search + "%"
-	  find(:all, :conditions => ['title LIKE ? OR author LIKE ? OR book_type LIKE ?' , search_condition, search_condition, search_condition])
+	  find(:all, :conditions => ['title LIKE ? OR author LIKE ? OR book_type LIKE ?', search_condition, search_condition, search_condition])
   end
 
 

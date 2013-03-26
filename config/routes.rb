@@ -8,9 +8,7 @@ BookShow::Application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
 
-  resources :books, only: [:index] do
-    get "search", to: "books#search"
-  end
+  post "search", to: "books#search"
 
   root :to => "books#index"
   # The priority is based upon order of creation:

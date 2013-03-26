@@ -9,7 +9,11 @@
 
 <body>
 <%if user_signed_in? %>
-	Welcom <%= current_user.email %>
+	Welcome <%= current_user.email %>
+	<%if @is_current_user_admin%>
+	(admin)
+	<%end%>
+	
 	<%=link_to "Sign Out", destroy_user_session_path, :method => :delete %>
 
 	<%else%>
