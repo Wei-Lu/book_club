@@ -1,3 +1,4 @@
+
 class BooksController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show, :search]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
@@ -7,6 +8,10 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+#    @books.sort_by do |book|
+#      [book.title]
+#    end
+#    @books.sort_by(&:invertible)
 
     respond_to do |format|
       format.html # index.html.erb

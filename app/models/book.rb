@@ -15,7 +15,7 @@ class Book < ActiveRecord::Base
   SEARCH_TYPE = "Type"
   SEARCH_AUTHOR = "Author"
   SEARCH_TITLE = "Title"
-  SEACRCH_TYPES = [SEARCH_TYPE, SEARCH_AUTHOR, SEARCH_TITLE]
+  SEARCH_TYPES = [SEARCH_TYPE, SEARCH_AUTHOR, SEARCH_TITLE]
   
   def self.search_for(search_type, keyword)
   	if search_type == SEARCH_TYPE

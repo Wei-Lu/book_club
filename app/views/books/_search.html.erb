@@ -1,4 +1,5 @@
-  <%= form_tag :controller => 'books', :action => 'search', :method => 'get' do %>
+  <%= form_tag search_books_path  do  %>
+      <%= select_tag :search_type, options_for_select(Book::SEARCH_TYPES) %>
       <%= text_field_tag :search, params[:search], :id => 'search_field' %>
       <%= submit_tag "Search", :name => nil %> 
   <% end %> 
