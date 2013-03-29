@@ -116,13 +116,13 @@ class BooksController < ApplicationController
 end
 
 def search
-  @books = Book.search params[:search]  
+  @search_type = params[:search_type]
+  @books = Book.search_for params[:search_type], params[:search]
 end
 
 private
 
 def find_book
-#  @book = Book.find(params[:id])
   @book = Book.find( params[:book_id] || params[:id])
 end
 

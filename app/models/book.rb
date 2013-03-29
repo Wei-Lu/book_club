@@ -10,28 +10,26 @@ class Book < ActiveRecord::Base
   has_many :likes
   has_many :users, through: :likes
 
-  BOOK_TYPES = ["Fiction", "Mystry", "Fantisy", "Arts", "Business","History", "Sciences", "Health","Travel"]
-
+  BOOK_TYPES = ["Fiction", "Mystery", "Fantasy", "Arts", "Business","History", "Sciences", "Health","Travel"]
+  SEARCH_ALL = "All" 
   SEARCH_TYPE = "Type"
   SEARCH_AUTHOR = "Author"
   SEARCH_TITLE = "Title"
-  SEARCH_TYPES = [SEARCH_TYPE, SEARCH_AUTHOR, SEARCH_TITLE]
-  
+  SEARCH_TYPES = [SEARCH_ALL, SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
+
   def self.search_for(search_type, keyword)
-  	if search_type == SEARCH_TYPE
-      Book.where(book_type: keyword )
+    search_condition = "%" + keyword + "%"
+    if search_type == SEARCH_ALL
+      find(:all, :conditions => ['title LIKE ? OR author LIKE ? OR book_type LIKE ?', search_condition, search_condition, search_condition])
+  	elsif search_type == SEARCH_TYPE
+      find(:all, :conditions => ['book_type LIKE ?',  search_condition])
   	elsif search_type == SEARCH_AUTHOR
-      Book.where(author: keyword )
+      find(:all, :conditions => ['author LIKE ?', search_condition])
   	elsif search_type == SEARCH_TITLE
-      Book.where(title: keyword )
+     find(:all, :conditions => ['title LIKE ?', search_condition])
   	else
   		[]
   	end
-  end
-
-  def self.search(search)
-	  search_condition = "%" + search + "%"
-	  find(:all, :conditions => ['title LIKE ? OR author LIKE ? OR book_type LIKE ?', search_condition, search_condition, search_condition])
   end
 
 

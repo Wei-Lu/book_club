@@ -1,13 +1,10 @@
 Hello <%= @user.email %>
 <br/>
 <br/>
-<p> Someone has written a review on 
-<%=	"@book.title" %>
-<p>
-
-<% link_to @book.title, book_url(@book)%>
+<p> Someone has written a review on book <<
+<%= link_to @book.title, book_url(@book)%> >>
 <br/>
 <br/>
 Sincerely,
-
+<br/>
 Wei's Book Show 

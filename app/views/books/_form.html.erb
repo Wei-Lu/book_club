@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label "By" %><br />
+    <%= f.label "By" %>
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :type %><br />
+    <%= f.label :type %>
     <%= f.select(:book_type, Book::BOOK_TYPES) %>  
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 5 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary"%>
   </div>
 <% end %>

@@ -3,21 +3,24 @@
 <head>
   <title>Book Show</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <style type="text/css">@import(stylesheets/private.css)</style>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
 <%if user_signed_in? %>
+	<div align="right" style="margin-right:2cm; border="1">
+	  <%=link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'mybutton' %>
+    </div>
 	Welcome <%= current_user.email %>
 	<%if @is_current_user_admin%>
 	(admin)
-	<%end%>
-	
-	<%=link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-
+	<%end%>	
 	<%else%>
-	<%=link_to "Sign In", new_user_session_path %>
+	<div align="left" style="margin-right:2cm; border="1">
+	  <%=link_to "Sign In", new_user_session_path, :class => "mybutton", :style=> "color: #FFFFFF" %>
+	</div>
 <%end%>
 <%= yield %>
 

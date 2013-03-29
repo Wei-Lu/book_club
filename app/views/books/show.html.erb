@@ -18,7 +18,7 @@
 
 <p>
   <b>Description:</b>
-  <div style="border:solid black 1px">
+  <div style="border:solid black 1px;margin-right:2cm">
     <%= @book.description %>
   </div>
 </p>
@@ -29,15 +29,15 @@
   <% if user_signed_in? %>
     <% if current_user.has_liked?(@book) %>
       <%= form_for @like, url: book_like_path(@book, @like), method: :delete do |f| %>
-        <%= f.submit "UnLike" %>  
+        <%= f.submit "UnLike", class: "mybutton" %>  
       <% end %>
     <% else %>
       <%= form_for @like, url: book_likes_path(@book) do |f| %>
-        <%= f.submit "Like" %>  
+        <%= f.submit "Like", class: "mybutton" %>  
       <% end %>
     <% end %>
   <% else %>
-    Please <%= link_to "Sign In", new_user_session_path %> in order to like the book
+    Please <%= link_to "Sign In", new_user_session_path, :class => "mybutton", :style=> "color: #FFFFFF" %> in order to like the book
   <% end %>
 <hr/>
 <h2> Reviews </h2>
@@ -46,10 +46,10 @@
 <%else%>
 
   <% @book.reviews.each do |review| %>
-   	<div style="border:solid black 1px">
+   	<div style="border:solid black 1px;margin-right:2cm ">
   		<p> <%= review.content %> </p>
       <% if @is_current_user_admin  %>    
-        <%= link_to "Delete review".html_safe, book_review_path(@book, review), method: :delete, confirm: "Are you sure you want to delete this review" %>
+        <%= link_to "Delete review", book_review_path(@book, review), method: :delete, confirm: "Are you sure you want to delete this review", :class => "mybutton" %>
       <% end %>
     </div>
   <% end %>
@@ -64,5 +64,5 @@
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
  
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit', edit_book_path(@book), :class => "mybutton", :style=> "color: #FFFFFF" %> &nbsp;
+<%= link_to 'Back', books_path, :class => "mybutton", :style=> "color: #FFFFFF" %>

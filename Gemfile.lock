@@ -43,6 +43,11 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     daemons (1.1.9)
+    delayed_job (3.0.5)
+      activesupport (~> 3.0)
+    delayed_job_active_record (0.4.3)
+      activerecord (>= 2.1.0, < 4)
+      delayed_job (~> 3.0)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -72,6 +77,8 @@ GEM
     orm_adapter (0.4.0)
     pg (0.15.0)
     polyglot (0.3.3)
+    quiet_assets (1.0.1)
+      railties (~> 3.1)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -140,11 +147,13 @@ DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
   coffee-rails (~> 3.2.1)
+  delayed_job_active_record
   devise
   faker
   jquery-rails
   mysql2
   pg
+  quiet_assets
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.3)
