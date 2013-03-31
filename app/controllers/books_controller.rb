@@ -8,10 +8,6 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
-#    @books.sort_by do |book|
-#      [book.title]
-#    end
-#    @books.sort_by(&:invertible)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -22,7 +18,6 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-#    @book = Book.find(params[:id])
     @review = Review.new
     @like   = (current_user && current_user.like_for(@book)) || Like.new
 
@@ -50,7 +45,6 @@ class BooksController < ApplicationController
   # GET /books/1/edit
   def edit
     if @is_current_user_admin
-#  if(current_user && current_user.is_admin?)
       @book = Book.find(params[:id])
     else
       redirect_to books_url, notice: "You must be an admin to edit the book entry"      
@@ -80,7 +74,6 @@ class BooksController < ApplicationController
   # PUT /books/1
   # PUT /books/1.json
   def update
-#    @book = Book.find(params[:id])
 
     if @is_current_user_admin
       respond_to do |format|
@@ -100,7 +93,6 @@ class BooksController < ApplicationController
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
-#    @book = Book.find(params[:id])
     if @is_current_user_admin
       if @book.destroy
         respond_to do |format|
