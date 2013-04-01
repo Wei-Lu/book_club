@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<br />
+<table width="100%" border="0">
+	<tr>
+		<td><%= render 'search' %></td>
+		<td>&nbsp;</td>
+		<td><%= render 'sort_by' %></td>
+	</tr>
+</table>
+<br />
+<h1>Listing books</h1>
+
+<%= render 'list_books' %>
+
+<br />
+
+<% if @is_current_user_admin  %>    
+  <%= link_to 'New Book', new_book_path, :class => "mybutton", :style=> "color: #FFFFFF" %>
+<% end %>

@@ -1,0 +1,5 @@
+  <%= form_tag sort_books_path  do  %>
+  <% @sort_type = "All" unless @sort_type %> 
+    <%= select_tag :sort_type, options_for_select(Book::ORDER_TYPES, @sort_type) %> 
+    <%= submit_tag "Sort", :name => nil %> 
+  <% end %> 

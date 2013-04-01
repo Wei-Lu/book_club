@@ -7,6 +7,7 @@ BookShow::Application.routes.draw do
     resources :reviews, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
     post :search, on: :collection
+    post :sort, on: :collection
   end
 
 

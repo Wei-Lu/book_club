@@ -7,8 +7,12 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
-
+    @sort_type = params[:sort_type]
+    if @sort_type
+      @books = Book.all_ordered params[:sort_type]
+    else  
+      @books = Book.all_ordered
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @books }
@@ -110,6 +114,11 @@ end
 def search
   @search_type = params[:search_type]
   @books = Book.search_for params[:search_type], params[:search]
+end
+
+def sort
+  @sort_type = params[:sort_type]
+  @books = Book.all_ordered params[:sort_type]
 end
 
 private
