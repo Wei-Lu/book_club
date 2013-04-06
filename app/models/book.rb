@@ -46,6 +46,8 @@ class Book < ActiveRecord::Base
     end
   end
 
-
+  def likes_count
+    likes.count
+  end  
 
 end

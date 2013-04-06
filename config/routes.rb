@@ -2,7 +2,8 @@ BookShow::Application.routes.draw do
   devise_for :users
 
   resources :books
-  
+  match 'books_ratings' => 'books#ratings'
+
   resources :books, only: [:show] do
     resources :reviews, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
@@ -40,13 +41,13 @@ BookShow::Application.routes.draw do
 
   # Sample resource route with sub-resources:
   #   resources :products do
-  #     resources :comments, :sales
+  #     resources :Reviews, :sales
   #     resource :seller
   #   end
 
   # Sample resource route with more complex sub-resources
   #   resources :products do
-  #     resources :comments
+  #     resources :Reviews
   #     resources :sales do
   #       get 'recent', :on => :collection
   #     end

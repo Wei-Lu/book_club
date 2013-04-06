@@ -3,26 +3,31 @@
 <head>
   <title>Book Show</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <style type="text/css">@import(stylesheets/books.css.scss)</style>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-
 <body>
-<%if user_signed_in? %>
-	<div align="right" style="margin-right:2cm" border="1">
-	  <%=link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'mybutton' %>
-    </div>
-	Welcome <%= current_user.email %>
-	<%if @is_current_user_admin%>
-	(admin)
-	<%end%>	
-	<%else%>
-	<div align="left" style="margin-right:2cm" border="1">
-	  <%=link_to "Sign In", new_user_session_path, :class => "mybutton", :style=> "color: #FFFFFF" %>
+<div class="navbar navbar-fixed-top navbar-inverse">
+   <div class="navbar-inner">	
+		<div class="container">
+			 	<%= link_to "Book Show", :root, class: "brand" %>
+			 	<div  id="main-menu"> <!-- class="nav-collapse collapse" -->
+			 		<ul class="nav">
+			 			<li class=""><a href="/">Home</a></li>
+			 			<li><%= link_to "Ratings",books_ratings_path %></li>
+			 		</ul>
+					<%= render partial: '/layouts/shared/user_bar' %>
+				</div>
+		</div>
 	</div>
-<%end%>
-<%= yield %>
+</div>
+
+	<%= render partial: '/layouts/shared/flash_display', locals: {notice: notice, alert: alert} %>
+
+<div class="container">
+	<br/>
+	<%= yield %>
+</div>
 
 </body>
 </html>
