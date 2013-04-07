@@ -1,2 +1,9 @@
+<h1>Listing Search Results</h1>
+<% if @books.count == 0 %>
+ No book is found.
+<% else %>
+  <%= render 'list_books' %>
+<%end%>
+ <br/>
 <br/>
-<%= render 'index' %>
+<%= link_to 'Back', books_path, :class => "mybutton", :style=> "color: #FFFFFF" %> 

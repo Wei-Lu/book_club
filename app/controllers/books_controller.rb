@@ -1,19 +1,14 @@
 require 'google_chart' 
 
 class BooksController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show, :search]
+  before_filter :authenticate_user!, except: [:index, :show, :search, :ratings]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
   before_filter :set_is_current_user_admin
 
   # GET /books
   # GET /books.json
   def index
-    @sort_type = params[:sort_type]
-    if @sort_type
-      @books = Book.all_ordered params[:sort_type]
-    else  
-      @books = Book.all_ordered
-    end
+    @books = Book.all.sort_by(&:likes_count).reverse.map    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @books }

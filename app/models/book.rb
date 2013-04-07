@@ -15,8 +15,9 @@ class Book < ActiveRecord::Base
   SEARCH_TYPE = "Type"
   SEARCH_AUTHOR = "Author"
   SEARCH_TITLE = "Title"
+  LIKES_COUNT = "Likes Count"
   SEARCH_TYPES = [SEARCH_ALL, SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
-  ORDER_TYPES = [SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
+  ORDER_TYPES = [LIKES_COUNT, SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
   def self.search_for(search_type, keyword)
     search_condition = "%" + keyword + "%"
     if search_type == SEARCH_ALL
@@ -33,8 +34,8 @@ class Book < ActiveRecord::Base
   end
 
   def self.all_ordered(order_type=SEARCH_ALL)
-    if order_type == SEARCH_ALL
-      find(:all,  :order =>'title ASC, Author ASC, book_type ASC')
+    if order_type == LIKES_COUNT
+      all.sort_by(&:likes_count).reverse.map    
     elsif order_type == SEARCH_TITLE
       find(:all, :order =>'title ASC')
     elsif order_type == SEARCH_AUTHOR
