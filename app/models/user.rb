@@ -6,14 +6,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :name, :password_confirmation, :remember_me
   attr_reader :is_admin
 
   validates_uniqueness_of :email
   validates_format_of :email, :with => /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
  
-  has_many :books
-
+  #has_many :books
+  has_many :reviews
   has_many :likes
   has_many :liked_books, through: :likes, source: :book
 
@@ -25,4 +25,7 @@ class User < ActiveRecord::Base
     likes.where(book_id: book.id).first
   end
 
+  def self.find_user(review)
+    User.all.where( user_id: review.user_id).first
+  end
 end

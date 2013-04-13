@@ -31,9 +31,9 @@ gem 'faker'
 gem 'pg'
 gem 'delayed_job_active_record'
 gem 'quiet_assets'
-gem 'paperclip', '~> 3.0'
-gem 'aws-sdk', '~> 1.5.7'
-gem 'rmagick'
+#gem 'paperclip', '~> 3.0'
+#gem 'aws-sdk', '~> 1.5.7'
+#gem 'rmagick'
 gem 'gchartrb'
 
 
