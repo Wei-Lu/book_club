@@ -3,8 +3,7 @@ require 'google_chart'
 class BooksController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show, :search, :ratings]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
-  before_filter :set_is_current_user_admin
-
+  before_filter :noadmin_redirect, only: [:new, :edit, :update, :create, :destrory] 
   # GET /books
   # GET /books.json
   def index
@@ -66,101 +65,75 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
-    if @is_current_user_admin
-      @book = Book.new
+    @book = Book.new
 
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json { render json: @book }
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @book }
       end
-    else
-      redirect_to books_url, notice: "You must be an admin to create the book entry"      
-    end
   end
 
   # GET /books/1/edit
   def edit
-    if @is_current_user_admin
-      @book = Book.find(params[:id])
-    else
-      redirect_to books_url, notice: "You must be an admin to edit the book entry"      
-    end
+    @book = Book.find(params[:id])
   end
 
   # POST /books
   # POST /books.json
   def create
-    if @is_current_user_admin
-      @book = Book.new(params[:book])
+    @book = Book.new(params[:book])
 
-      respond_to do |format|
-        if @book.save
-          format.html { redirect_to @book, notice: 'Book was successfully created.' }
-          format.json { render json: @book, status: :created, location: @book }
-        else
-          format.html { render action: "new" }
-          format.json { render json: @book.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @book.save
+        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.json { render json: @book, status: :created, location: @book }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @book.errors, status: :unprocessable_entity }
       end
-    else
-      redirect_to books_url, notice: "You must be an admin to create the book entry"      
     end
   end
 
   # PUT /books/1
   # PUT /books/1.json
   def update
-
-    if @is_current_user_admin
-      respond_to do |format|
-        if @book.update_attributes(params[:book])
-          format.html { redirect_to @book, notice: 'Book was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @book.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @book.update_attributes(params[:book])
+        format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @book.errors, status: :unprocessable_entity }
       end
-    else
-        redirect_to books_url, notice: "You must be an admin to update the book entry"      
     end
   end
 
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
-    if @is_current_user_admin
-      if @book.destroy
-        respond_to do |format|
-          format.html { redirect_to books_url, notice: "Book entry is deleted successfully"  }
-          format.json { head :no_content }
-        end
-      else
-        format.html { redirect_to books_url, notice: "Book entry is not deleted."  }
+    if @book.destroy
+      respond_to do |format|
+        format.html { redirect_to books_url, notice: "Book entry is deleted successfully"  }
+        format.json { head :no_content }
       end
     else
-          redirect_to books_url, notice: "You must be an admin to delete book entry"      
+      format.html { redirect_to books_url, notice: "Book entry is not deleted."  }
     end
-end
+  end
 
-def search
-  @search_type = params[:search_type]
-  @books = Book.search_for params[:search_type], params[:search]
-end
+  def search
+    @search_type = params[:search_type]
+    @books = Book.search_for params[:search_type], params[:search]
+  end
 
-def sort
-  @sort_type = params[:sort_type]
-  @books = Book.all_ordered params[:sort_type]
-end
+  def sort
+    @sort_type = params[:sort_type]
+    @books = Book.all_ordered params[:sort_type]
+  end
 
-private
+  private
 
-def find_book
-  @book = Book.find( params[:book_id] || params[:id])
-end
-
-def set_is_current_user_admin
-  @is_current_user_admin = (current_user && current_user.is_admin?)
-end
-
+  def find_book
+    @book = Book.find( params[:book_id] || params[:id])
+  end
 end

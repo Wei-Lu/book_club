@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top">	
    <div class="navbar-inner">	
 		<div class="container">
 			 	<%= link_to "Book Show", :root, class: "brand" %>
@@ -15,6 +15,11 @@
 			 		<ul class="nav">
 			 			<li class=""><a href="/">Home</a></li>
 			 			<li><%= link_to "Ratings",books_ratings_path %></li>
+
+						<% if (current_user && current_user.is_admin?) %>
+				              <li><%= link_to "Admin", users_path %></li>
+					  	<% end %>
+
 			 		</ul>
 					<%= render partial: '/layouts/shared/user_bar' %>
 				</div>
