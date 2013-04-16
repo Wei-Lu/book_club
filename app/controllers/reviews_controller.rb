@@ -30,4 +30,6 @@ def find_review
   @review = Review.find(params[:id] )
 end
 
+ def noadmin_redirect
+  end
 end
