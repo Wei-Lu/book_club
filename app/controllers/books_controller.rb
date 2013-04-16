@@ -1,7 +1,7 @@
 require 'google_chart' 
 
 class BooksController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show, :search, :ratings]
+  before_filter :authenticate_user!, except: [:index, :show, :search, :sort, :ratings]
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
   before_filter :noadmin_redirect, only: [:new, :edit, :update, :create, :destrory] 
   # GET /books
