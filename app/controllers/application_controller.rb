@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def noadmin_redirect
-	  @is_current_user_admin = (current_user && current_user.is_admin?)
+	  set_is_current_user_admin()
 	  if !@is_current_user_admin
 	    redirect_to books_url, notice: "You must be an admin to to access the function"      
 	  end
