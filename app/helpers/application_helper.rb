@@ -10,5 +10,12 @@ module ApplicationHelper
         'false'
       end 	
   end
+  
+  def pluralize_second_without_count(count, noun, text = nil)
+    if count < -1 or count == 0 or count > 1
+      return noun
+    end
+    return "#{noun.pluralize}#{text}"
+  end  
 
 end

@@ -2,7 +2,7 @@ BookShow::Application.routes.draw do
   devise_for :users
 
   resources :books
-  resources :users
+  resources :users, except: [:show]
   match 'books_ratings' => 'books#ratings'
 
   resources :books, only: [:show] do
