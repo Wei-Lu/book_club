@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>&nbsp;
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>&nbsp;
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>User is admin:</b>&nbsp;
+  <%= get_is_user_admin(@user) %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user), :class => "mybutton", :style=> "color: #FFFFFF" %> &nbsp;
+<%= link_to 'Back', users_path, :class => "mybutton", :style=> "color: #FFFFFF" %>

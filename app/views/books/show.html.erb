@@ -32,6 +32,11 @@
 
   <% @book.reviews.each do |review| %>
    	<div class="well" style="margin-right:2cm">
+      <% if review.user && review.user.pic.file? %>
+        <div class="thumbnail pull-left review-avatar">
+          <%= image_tag review.user.pic.url(:thumb) %>
+        </div>
+      <% end %>      
       <p> Created at: <%= formatted_date review.created_at %> ;&nbsp; by: <%=review.user.name %></p>
   		<p> <%= review.content %> </p>
       <% if @is_current_user_admin or (current_user && current_user.id == review.user_id) %>     
