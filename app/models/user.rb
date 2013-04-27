@@ -8,6 +8,15 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :name, :password_confirmation, :remember_me
   attr_accessible :is_admin
+  attr_accessible :pic
+  has_attached_file :pic, :styles => 
+    { 
+      thumb: '50x50>',
+      square: '200x200#',
+      medium: '300x300>',
+      :default_url => '/no_avatar.jpg'
+    }
+
 
   validates_uniqueness_of :email
   validates_format_of :email, :with => /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/

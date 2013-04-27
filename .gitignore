@@ -15,3 +15,4 @@
 /tmp
 *.bak
 /config/database.yml
+/public/system/users/pics/*.*
