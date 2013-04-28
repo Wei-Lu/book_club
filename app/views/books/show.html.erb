@@ -17,6 +17,17 @@
     <%= @book.description %>
   </div>
 </p>
+
+<div class="images_container">
+  <div class="book_image" id="book_image">
+  <% if @book.pic and @book.pic.file? %>
+    <%= image_tag @book.pic.url(:medium), class: "img-polaroid main_image" %>
+  <% else %>
+   <p>No image has been added for this book yet...</p>
+  <% end %>
+  <div>
+</div>
+
 <hr>
 <%= render 'likes/like' %>
 

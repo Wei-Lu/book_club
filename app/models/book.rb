@@ -5,7 +5,11 @@ class Book < ActiveRecord::Base
   validates :author, presence: true
 
   has_many :reviews, dependent: :destroy
-#  belongs_to :user
+  
+  has_attached_file :pic, :styles => 
+           { :medium => "300x400>", :thumb => "100x100>" }
+  has_attached_file :attach
+  attr_accessible :pic, :attach
 
   has_many :likes
   has_many :users, through: :likes
