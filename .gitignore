@@ -15,4 +15,6 @@
 /tmp
 *.bak
 /config/database.yml
-/public/system/users/pics
+/public/system
+test.sqlite3
+Gemfile.lock
