@@ -1,0 +1,20 @@
+<p>
+  <b>By:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @book.book_type %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <div class="well" style="margin-right:2cm">
+    <%= @book.description %>
+  </div>
+</p>
+<% if @book.attach and @book.attach.file? %>
+  <a href="<%= @book.attach.url %> ">
+              <b>File attached </b></a>
+<%end%>
