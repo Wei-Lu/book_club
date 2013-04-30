@@ -18,7 +18,10 @@ class LikesController < BooksController
       redirect_to @book, notice: "You UnLiked the book!"
     else
       redirect_to @book, notice: "Sorry you couldn't unlike it!"
-    end
-  	
+    end  	
   end
+  
+  def noadmin_redirect
+  end
+
 end
