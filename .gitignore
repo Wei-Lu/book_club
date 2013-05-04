@@ -16,5 +16,4 @@
 *.bak
 /config/database.yml
 /public/system
-test.sqlite3
 Gemfile.lock

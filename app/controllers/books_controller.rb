@@ -17,15 +17,11 @@ class BooksController < ApplicationController
   def ratings
     @books = Book.all.sort_by(&:likes_count).reverse.map
     
-    # Need to clean up this code
-    # OK for now, prototype code, just needs to work
-    bar_1_data = []
-    names_array = []
     pc_data = {}
 
     i = 0
     @books.each do |book|
-      h1 = { book.title + ' by ' + book.author => book.likes.count }
+      h1 = { book.title => book.likes.count }
       pc_data = pc_data.merge(h1)
       i = i + 1
       if i == 5 
@@ -36,12 +32,12 @@ class BooksController < ApplicationController
     # pc.data key, value
     h = pc_data.length * 55 + 50 
     lc = GoogleChart::BarChart.new("700x" + h.to_s, "", :horizontal, false)
-      lc.show_legend = false
-      lc.axis :x, :color => '333333', :font_size => 10, :alignment => :center, :range => [0,pc_data.values.max]
-      lc.axis :y, :color => '333333', :font_size => 20, :alignment => :right, :labels => pc_data.keys.reverse
-      lc.width_spacing_options(:bar_width => 50, :bar_spacing => 5) 
-      lc.data "Books", pc_data.values, '3caae8'
-    
+    lc.show_legend = false
+    lc.axis :x, :color => '333333', :font_size => 10, :alignment => :center, :range => [0,pc_data.values.max]
+    lc.axis :y, :color => '333333', :font_size => 20, :alignment => :right, :labels => pc_data.keys.reverse
+    lc.width_spacing_options(:bar_width => 50, :bar_spacing => 5) 
+    lc.data "Books", pc_data.values, '3caae8'
+  
     @chart_url = lc.to_url
 
     respond_to do |format|
