@@ -1,7 +1,7 @@
 <% if current_user %>
 <% if current_user.has_liked?(@book) %>
 	<%= form_for @like, url: book_like_path(@book, @like), method: :delete do |f| %>
-		<%= f.submit "Unlike", class: "btn btn-primary" %> <%= pluralize @book.likes.count, 'person' %> <%= pluralize_second_without_count @book.likes.count, 'like' %> this book!
+		<%= f.submit "Undo Like", class: "btn btn-primary" %> <%= pluralize @book.likes.count, 'person' %> <%= pluralize_second_without_count @book.likes.count, 'like' %> this book!
 	<% end %>
 <% else %>
   <p><%= link_to raw('<i class=\'icon-thumbs-up icon-white\'></i> Like'),
