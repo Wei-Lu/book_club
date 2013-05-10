@@ -27,7 +27,7 @@ gem 'mysql2' , group: :development
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-gem 'faker'
+#gem 'faker'
 gem 'pg'
 gem 'delayed_job_active_record'
 gem 'quiet_assets'
