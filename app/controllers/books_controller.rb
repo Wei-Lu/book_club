@@ -25,7 +25,7 @@ class BooksController < ApplicationController
 
     i = 0
     @books.each do |book|
-      h1 = { book.title + ' by ' + book.author => book.likes.count }
+      h1 = { book.title => book.likes.count }
       pc_data = pc_data.merge(h1)
       i = i + 1
       if i == 5 
