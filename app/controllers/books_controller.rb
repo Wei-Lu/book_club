@@ -17,10 +17,6 @@ class BooksController < ApplicationController
   def ratings
     @books = Book.all.sort_by(&:likes_count).reverse.map
     
-    # Need to clean up this code
-    # OK for now, prototype code, just needs to work
-    bar_1_data = []
-    names_array = []
     pc_data = {}
 
     i = 0
@@ -41,7 +37,7 @@ class BooksController < ApplicationController
     lc.axis :y, :color => '333333', :font_size => 20, :alignment => :right, :labels => pc_data.keys.reverse
     lc.width_spacing_options(:bar_width => 50, :bar_spacing => 5) 
     lc.data "Books", pc_data.values, '3caae8'
-    
+  
     @chart_url = lc.to_url
 
     respond_to do |format|

@@ -1,0 +1,21 @@
+<p>
+  <b>By:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @book.book_type %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <div class="well" style="margin-right:2cm">
+    <%= @book.description %>
+  </div>
+</p>
+<% if @book.attach and @book.attach.file? %>
+  <%= link_to raw('<i class=\'icon-file icon-white\'></i> File attached'),
+    @book.attach.url, class: "btn btn-primary"%> 
+    <br/>
+ <%end%>

@@ -27,6 +27,17 @@
     <%= f.label :description %>
     <%= f.text_area :description, :style => "width:400px", rows: 5 %>
   </div>
+
+   <p>
+     <b> Picture </b><br/>
+     <%= f.file_field :pic %>
+   </p>  
+
+   <p>
+     <b> Attachment </b><br/>
+     <%= f.file_field :attach %>
+  </p>
+
   <div class="actions">
     <%= f.submit class: "btn btn-primary"%>
   </div>
