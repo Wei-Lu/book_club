@@ -10,7 +10,9 @@
 <% if user_signed_in? %>
   <%= form_for @review, url: book_reviews_path(@book) do |f| %>
     <%= f.text_area :content, :rows => 5, :cols => 80, :class => "input-xxlarge" %>
-    <%= f.submit class: "btn btn-primary" %>
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      <i class="icon-envelope icon-white"></i> Create Review
+    <% end %>
   <% end %>
 <% end %> 
 

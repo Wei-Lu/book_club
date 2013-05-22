@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<A NAME="TOP"><A>
 <div class="navbar navbar-fixed-top">	
    <div class="navbar-inner">	
 		<div class="container">
@@ -27,11 +28,10 @@
 	</div>
 </div>
 
-	<%= render partial: '/layouts/shared/flash_display', locals: {notice: notice, alert: alert} %>
-
+<%= render partial: '/layouts/shared/flash_display', locals: {notice: notice, alert: alert} %>
 <div class="container">
-	<br/>
-	<%= yield %>
+  <br/>
+  <%= yield %>
 </div>
 <br/>
 <%= render "/layouts/shared/footer" %>
