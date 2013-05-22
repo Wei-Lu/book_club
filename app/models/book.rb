@@ -15,22 +15,23 @@ class Book < ActiveRecord::Base
   has_many :users, through: :likes
 
   BOOK_TYPES = ["Fiction", "Mystery", "Fantasy", "Arts", "Business","History", "Sciences", "Health","Travel"]
-  SEARCH_ALL = "All" 
-  SEARCH_TYPE = "Type"
-  SEARCH_AUTHOR = "Author"
-  SEARCH_TITLE = "Title"
+  ALL = "All" 
+  TYPE = "Type"
+  AUTHOR = "Author"
+  TITLE = "Title"
   LIKES_COUNT = "Likes Count"
-  SEARCH_TYPES = [SEARCH_ALL, SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
-  ORDER_TYPES = [LIKES_COUNT, SEARCH_TITLE, SEARCH_AUTHOR, SEARCH_TYPE]
+  SORT_BY = "Sort by "
+  SEARCH_TYPES = [ALL, TITLE, AUTHOR, TYPE]
+  ORDER_TYPES = [SORT_BY+LIKES_COUNT, SORT_BY+TITLE, SORT_BY+AUTHOR, SORT_BY+TYPE]
   def self.search_for(search_type, keyword)
     search_condition = "%" + keyword + "%"
-    if search_type == SEARCH_ALL
+    if search_type == ALL
       find(:all, :conditions => ['title LIKE ? OR author LIKE ? OR book_type LIKE ?', search_condition, search_condition, search_condition])
-  	elsif search_type == SEARCH_TYPE
+  	elsif search_type == TYPE
       find(:all, :conditions => ['book_type LIKE ?',  search_condition], :order =>'title ASC')
-  	elsif search_type == SEARCH_AUTHOR
+  	elsif search_type == AUTHOR
       find(:all, :conditions => ['author LIKE ?', search_condition])
-  	elsif search_type == SEARCH_TITLE
+  	elsif search_type == TITLE
      find(:all, :conditions => ['title LIKE ?', search_condition])
   	else
   		[]
@@ -38,13 +39,13 @@ class Book < ActiveRecord::Base
   end
 
   def self.all_ordered(order_type=SEARCH_ALL)
-    if order_type == LIKES_COUNT
+    if order_type == SORT_BY+LIKES_COUNT
       all.sort_by(&:likes_count).reverse.map    
-    elsif order_type == SEARCH_TITLE
+    elsif order_type == SORT_BY+TITLE
       find(:all, :order =>'title ASC')
-    elsif order_type == SEARCH_AUTHOR
+    elsif order_type == SORT_BY+AUTHOR
       find(:all, :order =>'author ASC')
-    elsif order_type == SEARCH_TYPE
+    elsif order_type == SORT_BY+TYPE
      find(:all, :order =>'book_type ASC')
     else
       []
