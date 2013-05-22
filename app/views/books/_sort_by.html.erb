@@ -1,5 +1,4 @@
   <%= form_tag sort_books_path, class: "form-search" do  %>
   <% @sort_type = "All" unless @sort_type %> 
-  Sort by &nbsp;
     <%= select_tag :sort_type, options_for_select(Book::ORDER_TYPES, @sort_type), onchange: "$(this).parent('form').submit();" %> 
   <% end %> 

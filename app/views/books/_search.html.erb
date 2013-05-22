@@ -2,5 +2,7 @@
   <% @search_type = "All" unless @search_type %> 
     <%= select_tag :search_type, options_for_select(Book::SEARCH_TYPES, @search_type) %> 
     <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-    <%= submit_tag "Search", class: "mybutton", :name => nil %> 
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      <i class="icon-search icon-white"></i> Search
+    <% end %>
   <% end %> 
