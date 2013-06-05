@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BookShow::Application.load_tasks
+BookClub::Application.load_tasks

@@ -1,4 +1,4 @@
-BookShow::Application.routes.draw do
+BookClub::Application.routes.draw do
   devise_for :users
 
   resources :books

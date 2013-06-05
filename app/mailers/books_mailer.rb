@@ -1,5 +1,5 @@
 class BooksMailer < ActionMailer::Base
-  default from: "do-not-reply@weibookshow.com"
+  default from: "do-not-reply@aclbookclub.com"
 
   def review_notification(user, book)
   	@user = user
