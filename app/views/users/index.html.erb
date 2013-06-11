@@ -5,17 +5,13 @@
       <th>Name</th>
       <th>Email</th>
       <th>is Admin</th>
-      <th></th>
-      <th></th>
     </tr>
 
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
+      <td><%= link_to user.name, edit_user_path(user), :class => "listitem" %></td>
+      <td><%= link_to user.email, edit_user_path(user), :class => "listitem" %></td>      
       <td><%= get_is_user_admin(user) %></td>
-      <td><%= link_to 'Edit', edit_user_path(user), :class => "mybutton", :style=> "color: #FFFFFF" %></td>
-      <td><%= link_to 'Destroy', user, :class => "mybutton", :style=> "color: #FFFFFF", method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   </table>

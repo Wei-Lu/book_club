@@ -1,5 +1,6 @@
 <h1>Editing user</h1>
 
 <%= render 'form' %>
+  <%= link_to 'Delete', @user, method: :delete, :class => "mybutton", :style=> "color: #FFFFFF", data: { confirm: 'Are you sure?' } %>&nbsp;
 
 <%= link_to 'Back', users_path, :class => "mybutton", :style=> "color: #FFFFFF" %>
