@@ -15,11 +15,6 @@
     <td><strong><%= link_to book.title, book, :class => "listitem" %></strong></td>
     <td class="listitem"><%= book.author %></td>
     <td class="listitem"><%= book.book_type %></td>
- 
-     <% if @is_current_user_admin  %>    
-      <td><%= link_to 'Edit',  edit_book_path(book),  :class => "mybutton", :style=> "color: #FFFFFF" %></td>
-      <td><%= link_to 'Delete', book, method: :delete, :class => "mybutton", :style=> "color: #FFFFFF", data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
   </tr>
 <% end %>
 </table>

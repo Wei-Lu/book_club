@@ -47,8 +47,8 @@
   <% end %>
 <% end %> 
 
-  <% if @is_current_user_admin %>    
-    <%= link_to 'Edit', edit_book_path(@book), :class => "mybutton", :style=> "color: #FFFFFF" %> &nbsp;
-  <% end %>
-
+<% if @is_current_user_admin %>    
+  <%= link_to 'Edit', edit_book_path(@book), :class => "mybutton", :style=> "color: #FFFFFF" %> &nbsp;
+  <%= link_to 'Delete', @book, method: :delete, :class => "mybutton", :style=> "color: #FFFFFF", data: { confirm: 'Are you sure?' } %>&nbsp;
+<% end %>
 <%= link_to 'Back', books_path, :class => "mybutton", :style=> "color: #FFFFFF" %>
