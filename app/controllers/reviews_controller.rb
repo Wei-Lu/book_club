@@ -8,7 +8,7 @@ class ReviewsController < BooksController
    @review.user = current_user
    if @review.save
 #     BooksMailer.delay.review_notification(current_user, @book)
-#     BooksMailer.review_notification(current_user, @book).deliver
+     BooksMailer.review_notification(current_user, @book).deliver
      redirect_to @book,notice: "Review created successfully!"
    else
      redirect_to @book, notice: "Review creation failed."
